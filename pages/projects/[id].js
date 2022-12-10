@@ -37,7 +37,7 @@ const Projects = ({ project }) => {
                   {ticket.text}
                 </th>
                 <td className="py-4 px-6">{ticket.description}</td>
-                <td className="py-4 px-6"></td>
+                <td className="py-4 px-6">{ticket.contributors}</td>
                 <td className="py-4 px-6">{ticket.status}</td>
               </tr>
             </>
