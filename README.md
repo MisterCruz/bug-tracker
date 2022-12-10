@@ -1,4 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Bug Tracker - A Product Management tool
+
+Built on the MERN stack with Next.js as the framework for scalability and SEO optimization
 
 ## Getting Started
 
