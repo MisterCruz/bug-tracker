@@ -17,6 +17,7 @@ const NewProject = () => {
 
       await axios.post(`http://localhost:3000/api/projects`, newProject);
       console.log("done");
+      setShowModal(false);
     } catch (err) {
       console.log(err);
     }
@@ -52,21 +53,20 @@ const NewProject = () => {
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
                   <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    I always felt like I could do anything. That’s the main
-                    thing people are controlled by! Thoughts- their perception
-                    of themselves! They're slowed down by their perception of
-                    themselves. If you're taught you can’t do anything, you
-                    won’t do anything. I was taught I could do everything.
+                    Add a new project
                   </p>
                   <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2"
                     placeholder="enter title"
                     onChange={(e) => setTitle(e.target.value)}
                   />
                   <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-2"
                     placeholder="enter description"
                     onChange={(e) => setDesc(e.target.value)}
                   />
                   <input
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2"
                     placeholder="enter author"
                     onChange={(e) => setAuthor(e.target.value)}
                   />
