@@ -1,4 +1,4 @@
-## Bug Tracker - A Product Management tool
+## Bug Tracker - A Product Management Tool 🐞
 
 Built on the MERN stack with Next.js as the framework and TypeScript
 
