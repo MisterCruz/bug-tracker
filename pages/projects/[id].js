@@ -27,7 +27,7 @@ const Projects = ({ project }) => {
           </tr>
         </thead>
         <tbody>
-          {project.tickets.map((ticket) => (
+          {project.tickets?.map((ticket) => (
             <>
               <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                 <th

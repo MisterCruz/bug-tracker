@@ -15,14 +15,6 @@ const ProjectSchema = new mongoose.Schema({
         type: [String],
         required: true,
     },
-    tickets: {
-        type: [{
-            text: {type:String, required: true}, 
-            description: {type: String, required: true},
-            status:{type: String, required: true},
-            contributors: {type: String, required: true},
-        }]
-    }
 }, {timestamps: true})
 
 export default mongoose.models.Project || mongoose.model("Project", ProjectSchema)
