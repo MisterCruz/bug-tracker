@@ -1,27 +1,38 @@
 import axios from "axios";
 import React, { use, useState } from "react";
 
-const TicketModal = () => {
+type projectIdProps = {
+  projectId: string;
+};
+
+const TicketModal: React.FunctionComponent<projectIdProps> = ({
+  projectId,
+}) => {
   const [showModal, setShowModal] = useState(false);
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
   const [author, setAuthor] = useState("");
+  const [status, setStatus] = useState("");
 
-  // const handleCreate = async () => {
-  //   try {
-  //     const newTicket = {
-  //       text,
-  //       description,
-  //       status,
-  //     };
+  const handleCreate = async () => {
+    try {
+      const newTicket = {
+        title,
+        desc,
+        author,
+        status,
+      };
 
-  //     //await axios.post(`http://localhost:3000/api/projects`, newProject);
-  //     console.log("done");
-  //     setShowModal(false);
-  //   } catch (err) {
-  //     console.log(err);
-  //   }
-  // };
+      await axios.post(
+        `http://localhost:3000/api/projects/${projectId}/tickets`,
+        newTicket
+      );
+      console.log("done");
+      setShowModal(false);
+    } catch (err) {
+      console.log(err);
+    }
+  };
 
   return (
     <>
@@ -70,6 +81,23 @@ const TicketModal = () => {
                     placeholder="enter author"
                     onChange={(e) => setAuthor(e.target.value)}
                   />
+
+                  <label
+                    htmlFor="ticketStatus"
+                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  >
+                    Select an option
+                  </label>
+                  <select
+                    id="ticketStatus"
+                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                    onChange={(e) => setStatus(e.target.value)}
+                  >
+                    <option selected>Choose a status...</option>
+                    <option value="Not started">Not started</option>
+                    <option value="In progress">In progress</option>
+                    <option value="Done">Done</option>
+                  </select>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">
@@ -83,7 +111,7 @@ const TicketModal = () => {
                   <button
                     className="bg-emerald-500 text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
-                    // onClick={handleCreate}
+                    onClick={handleCreate}
                   >
                     Save Changes
                   </button>

@@ -16,8 +16,18 @@ const ProjectSchema = new mongoose.Schema({
         required: true,
     },
     tickets: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Ticket'
+        title: {
+            type: String,
+        },
+        desc: {
+            type: String,
+        },
+        status: {
+            type: String,
+        },
+        author: {
+            type: String,
+        },
     }],
 }, {timestamps: true})
 

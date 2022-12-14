@@ -7,7 +7,7 @@ const Projects = ({ project }) => {
     <div className="overflow-x-auto relative border-solid border-2 border-gray-200 shadow-md shaddow-inner">
       <div className="flex justify-between pb-5 pt-5 pr-5">
         <h1 className="font-bold float-left pl-5">{project.title}</h1>
-        <TicketModal />
+        <TicketModal projectId={project._id} />
       </div>
       <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
@@ -37,7 +37,7 @@ const Projects = ({ project }) => {
                   {ticket.title}
                 </th>
                 <td className="py-4 px-6">{ticket.desc}</td>
-                <td className="py-4 px-6">{ticket.contributors}</td>
+                <td className="py-4 px-6">{ticket._id}</td>
                 <td className="py-4 px-6">{ticket.status}</td>
               </tr>
             </>

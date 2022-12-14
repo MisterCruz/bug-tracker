@@ -1,7 +1,6 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import type { NextApiRequest, NextApiResponse } from 'next'
 import Project from '../../../../../models/Project';
-import Ticket from '../../../../../models/Ticket';
 import dbConnect from '../../../../../utils/mongo';
 
 type Data = {
@@ -29,16 +28,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
 
     if (method === "POST") {
         try {
-            let ticket = await Ticket.create(req.body)
-            let result = await Project.findByIdAndUpdate(
+            Project.findByIdAndUpdate(
                 projectId,
-                { $push: {tickets: ticket}},
+                { $push: {tickets: req.body}},
                 {upsert: true, new: true}, function (err, result) {
                     console.log(err)
                 }
             )
             
-            res.status(201).json(result)
+            res.status(201).json(req.body)
         } catch (err) {
             res.status(500)
         }
