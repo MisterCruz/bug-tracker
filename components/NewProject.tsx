@@ -16,8 +16,8 @@ const NewProject = () => {
       };
 
       await axios.post(`http://localhost:3000/api/projects`, newProject);
-      console.log("done");
       setShowModal(false);
+      window.location.reload();
     } catch (err) {
       console.log(err);
     }
@@ -51,25 +51,24 @@ const NewProject = () => {
                   </button>
                 </div>
                 {/*body*/}
-                <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    Add a new project
-                  </p>
-                  <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2"
-                    placeholder="enter title"
-                    onChange={(e) => setTitle(e.target.value)}
-                  />
-                  <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-2"
-                    placeholder="enter description"
-                    onChange={(e) => setDesc(e.target.value)}
-                  />
-                  <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2"
-                    placeholder="enter author"
-                    onChange={(e) => setAuthor(e.target.value)}
-                  />
+                <div className="relative p-10 flex-auto">
+                  <div className="">
+                    <input
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5"
+                      placeholder="Enter title"
+                      onChange={(e) => setTitle(e.target.value)}
+                    />
+                    <input
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5"
+                      placeholder="Enter description"
+                      onChange={(e) => setDesc(e.target.value)}
+                    />
+                    <input
+                      className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline mb-5"
+                      placeholder="Enter author"
+                      onChange={(e) => setAuthor(e.target.value)}
+                    />
+                  </div>
                 </div>
                 {/*footer*/}
                 <div className="flex items-center justify-end p-6 border-t border-solid border-slate-200 rounded-b">

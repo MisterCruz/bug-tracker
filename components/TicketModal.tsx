@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 
 type projectIdProps = {
   projectId: string;
@@ -27,8 +27,8 @@ const TicketModal: React.FunctionComponent<projectIdProps> = ({
         `http://localhost:3000/api/projects/${projectId}/tickets`,
         newTicket
       );
-      console.log(newTicket.author);
       setShowModal(false);
+      window.location.reload();
     } catch (err) {
       console.log(err);
     }
@@ -63,22 +63,19 @@ const TicketModal: React.FunctionComponent<projectIdProps> = ({
                 </div>
                 {/*body*/}
                 <div className="relative p-6 flex-auto">
-                  <p className="my-4 text-slate-500 text-lg leading-relaxed">
-                    Add a new project
-                  </p>
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2"
-                    placeholder="enter title"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2 mb-5"
+                    placeholder="Enter title"
                     onChange={(e) => setTitle(e.target.value)}
                   />
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-2"
-                    placeholder="enter description"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline p-2 mb-5"
+                    placeholder="Enter description"
                     onChange={(e) => setDesc(e.target.value)}
                   />
                   <input
-                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2"
-                    placeholder="enter author"
+                    className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline pt-2 mb-5"
+                    placeholder="Enter author"
                     onChange={(e) => setAuthor(e.target.value)}
                   />
 

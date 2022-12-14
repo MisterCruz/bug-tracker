@@ -1,5 +1,5 @@
 import axios from "axios";
-import React from "react";
+import React, { useEffect } from "react";
 import TicketModal from "../../components/TicketModal";
 
 const Projects = ({ project }) => {
