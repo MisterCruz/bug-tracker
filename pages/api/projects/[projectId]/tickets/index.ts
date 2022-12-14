@@ -4,9 +4,6 @@ import Project from '../../../../../models/Project';
 import Ticket from '../../../../../models/Ticket';
 import dbConnect from '../../../../../utils/mongo';
 
-
-
-
 type Data = {
     name: string
   }
