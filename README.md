@@ -1,6 +1,14 @@
 ## Bug Tracker - A Product Management Tool 🐞
 
-Built on the MERN stack with Next.js as the framework and TypeScript
+Front End:
+- Next.js
+- React.js
+- Tailwind CSS
+
+Backend: 
+- Node.js
+- Express.js
+- MongoDB
 
 ## Getting Started
 
