@@ -27,7 +27,7 @@ const TicketModal: React.FunctionComponent<projectIdProps> = ({
         `http://localhost:3000/api/projects/${projectId}/tickets`,
         newTicket
       );
-      console.log("done");
+      console.log(newTicket.author);
       setShowModal(false);
     } catch (err) {
       console.log(err);

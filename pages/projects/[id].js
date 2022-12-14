@@ -27,17 +27,21 @@ const Projects = ({ project }) => {
           </tr>
         </thead>
         <tbody>
-          {project.tickets?.map((ticket) => (
+          {project.tickets?.map((ticket, id) => (
             <>
-              <tr className="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+              <tr
+                className="bg-white border-b dark:bg-gray-800 dark:border-gray-700"
+                key={ticket._id}
+              >
                 <th
                   scope="row"
                   className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
+                  key={id}
                 >
                   {ticket.title}
                 </th>
                 <td className="py-4 px-6">{ticket.desc}</td>
-                <td className="py-4 px-6">{ticket._id}</td>
+                <td className="py-4 px-6">{ticket.author}</td>
                 <td className="py-4 px-6">{ticket.status}</td>
               </tr>
             </>
