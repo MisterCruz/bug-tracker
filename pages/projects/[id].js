@@ -34,9 +34,9 @@ const Projects = ({ project }) => {
                   scope="row"
                   className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                 >
-                  {ticket.text}
+                  {ticket.title}
                 </th>
-                <td className="py-4 px-6">{ticket.description}</td>
+                <td className="py-4 px-6">{ticket.desc}</td>
                 <td className="py-4 px-6">{ticket.contributors}</td>
                 <td className="py-4 px-6">{ticket.status}</td>
               </tr>

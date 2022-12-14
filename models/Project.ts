@@ -15,6 +15,10 @@ const ProjectSchema = new mongoose.Schema({
         type: [String],
         required: true,
     },
+    tickets: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Ticket'
+    }],
 }, {timestamps: true})
 
 export default mongoose.models.Project || mongoose.model("Project", ProjectSchema)

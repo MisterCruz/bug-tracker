@@ -9,29 +9,19 @@ type Data = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
     const {
       method, 
-      query: {id},
+      query: {projectId},
   } = req;
 
     dbConnect();
 
     if (method === "GET") {
       try {
-        const project = await Project.findById(id)
+        const project = await Project.findById(projectId)
         res.status(200).json(project)
       } catch (err) {
         res.status(500)
       }
     } 
 
-    // if (method === "PUT") {
-    //   try {
-    //     const project = await Project.findByIdAndUpdate(id, req.body, {
-    //       new: true,
-    //     });
-    //     res.status(201).json(project)
-    //   } catch (err) {
-    //     res.status(500)
-    //   }
-    // }
 
 }

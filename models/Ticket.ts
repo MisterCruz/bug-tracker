@@ -24,14 +24,3 @@ const TicketSchema = new mongoose.Schema({
 }, {timestamps: true})
 
 export default mongoose.models.Ticket || mongoose.model("Ticket", TicketSchema)
-
-// tickets: {
-//     type: [{
-//         text: {type:String, required: true}, 
-//         description: {type: String, required: true},
-//         status:{type: String, required: true},
-//         contributors: {type: String, required: true},
-//     }]
-// }
-
-//
