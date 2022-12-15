@@ -5,7 +5,11 @@ import Navbar from "./Navbar";
 
 const Layout = ({ children }) => {
   const router = useRouter();
-  if (router.pathname != "/dashboard" && router.pathname != "/projects/[id]")
+  if (
+    router.pathname != "/dashboard" &&
+    router.pathname != "/projects/[id]" &&
+    router.pathname != "/projects/[id]/tickets/[ticketId]"
+  )
     return (
       <>
         <Navbar />

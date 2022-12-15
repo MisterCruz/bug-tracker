@@ -51,7 +51,6 @@ const Projects = ({ project }) => {
           ))}
         </tbody>
       </table>
-      <SelectedTicket />
     </div>
   );
 };
