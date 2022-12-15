@@ -21,7 +21,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
     if (method === "GET") {
       try {
         const project = await Project.findById(projectId)
-          
+        const ticket = project.tickets.filter((t: { _id: { toString: () => (string | string[] | undefined)[]; }; }) => {
+          return t._id.toString().includes(id)
+        })
+        console.log(ticket)
+        res.json(ticket)
       } catch (err) {
         res.status(500)
       }

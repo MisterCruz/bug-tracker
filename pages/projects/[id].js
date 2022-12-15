@@ -1,8 +1,11 @@
 import axios from "axios";
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import TicketModal from "../../components/TicketModal";
+import SelectedTicket from "../../components/SelectedTicket";
 
 const Projects = ({ project }) => {
+  const [selectedTicket, setSelectedTicket] = useState(false);
+  //const [ticket, setTicket] = useState("");
   return (
     <div className="overflow-x-auto relative border-solid border-2 border-gray-200 shadow-md shaddow-inner">
       <div className="flex justify-between pb-5 pt-5 pr-5">
@@ -48,6 +51,7 @@ const Projects = ({ project }) => {
           ))}
         </tbody>
       </table>
+      <SelectedTicket />
     </div>
   );
 };
