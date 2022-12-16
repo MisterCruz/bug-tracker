@@ -9,22 +9,22 @@ const SelectedTicket = ({ ticketRes }) => {
         <table class="min-w-full text-center">
           <thead>
             <tr>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4">
                 ID
               </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4">
                 Ticket Title
               </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4">
                 Description
               </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4">
                 Status
               </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4">
                 Edit
               </th>
-              <th scope="col" class="text-sm font-medium text-gray-900 px-6 py-4">
+              <th scope="col" class="text-md font-medium text-gray-900 px-6 py-4">
                 Delete
               </th>
             </tr>
