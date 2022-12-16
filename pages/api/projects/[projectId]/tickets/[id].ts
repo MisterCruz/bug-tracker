@@ -3,9 +3,6 @@ import type { NextApiRequest, NextApiResponse } from 'next'
 import Project from '../../../../../models/Project';
 import dbConnect from '../../../../../utils/mongo';
 
-
-
-
 type Data = {
     name: string
   }
