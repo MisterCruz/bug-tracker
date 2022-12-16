@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useState } from "react";
 import TicketModal from "../../components/TicketModal";
 import SelectedTicket from "../../components/SelectedTicket";
+import Link from "next/link";
 
 const Projects = ({ project }) => {
   const [selectedTicket, setSelectedTicket] = useState(false);
@@ -41,7 +42,9 @@ const Projects = ({ project }) => {
                   className="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white"
                   key={id}
                 >
-                  {ticket.title}
+                  <Link href={`/projects/${project._id}/tickets/${ticket._id}`}>
+                    {ticket.title}
+                  </Link>
                 </th>
                 <td className="py-4 px-6">{ticket.desc}</td>
                 <td className="py-4 px-6">{ticket.author}</td>

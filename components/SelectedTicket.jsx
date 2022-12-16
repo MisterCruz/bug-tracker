@@ -39,7 +39,7 @@ const SelectedTicket = ({ ticketRes }) => {
                 {ticketRes.desc}
               </td>
               <td class="text-sm text-gray-900 px-6 py-4 whitespace-nowrap">
-                <button className="bg-slate-500 text-white font-bold py-2 px-4 rounded-full">
+                <button className="bg-slate-400 text-white font-bold py-2 px-4 rounded-full">
                 {ticketRes.status}
                 </button>
               </td>
