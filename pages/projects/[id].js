@@ -1,11 +1,10 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React from "react";
 import TicketModal from "../../components/TicketModal";
 import SelectedTicket from "../../components/SelectedTicket";
 import Link from "next/link";
 
 const Projects = ({ project }) => {
-  const [selectedTicket, setSelectedTicket] = useState(false);
   return (
     <div className="overflow-x-auto relative border-solid border-2 border-gray-200 shadow-md shaddow-inner">
       <div className="flex justify-between pb-5 pt-5 pr-5">
