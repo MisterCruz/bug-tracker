@@ -48,7 +48,7 @@ const Dashboard = ({ projectList }: AppProps) => {
                     </Link>
                   </th>
                   <td className="py-4 px-6">{project.desc}</td>
-                  <td className="py-4 px-6">Rolando Cruz</td>
+                  <td className="py-4 px-6">Rolando</td>
                   <td className="py-4 px-6">5</td>
                 </tr>
               )
