@@ -8,7 +8,7 @@ import NewProject from "../components/NewProject";
 const Dashboard = ({ projectList }: AppProps) => {
   return (
     <div className="text-[#1f2937]">
-      <div className="overflow-x-auto relative border-solid border-2 border-gray-200 shadow-md shaddow-inner">
+      <div className="overflow-x-auto relative border-solid border-2 border-gray-200 shadow-md shaddow-inner dark:bg-gray-700 dark:text-gray-400">
         <div className="flex justify-between pb-5 pt-5 pr-5">
           <h1 className="font-bold float-left pl-5">Projects</h1>
           <NewProject />
