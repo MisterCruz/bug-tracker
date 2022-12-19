@@ -6,7 +6,7 @@ import Link from "next/link";
 
 const Projects = ({ project }) => {
   return (
-    <div className="overflow-x-auto relative border-solid border-2 border-gray-200 shadow-md shaddow-inner">
+    <div className="overflow-x-auto relative border-solid border-2 border-gray-200 shadow-md shaddow-inner dark:bg-gray-700 dark:text-gray-400">
       <div className="flex justify-between pb-5 pt-5 pr-5">
         <h1 className="font-bold float-left pl-5">{project.title}</h1>
         <TicketModal projectId={project._id} />

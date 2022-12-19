@@ -6,7 +6,7 @@ import styles from "../styles/Home.module.css";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div className="dark:bg-gray-700 dark:text-gray-400">
       <Head>
         <title>Bug Tracker</title>
         <meta

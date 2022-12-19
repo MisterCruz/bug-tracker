@@ -3,7 +3,7 @@ import React from "react";
 import { AiFillBug } from "react-icons/ai";
 const Navbar = () => {
   return (
-    <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-[#1f2937] ">
+    <div className="flex justify-between items-center h-24 max-w-[1240px] mx-auto px-4 text-[#1f2937] dark:bg-gray-700 dark:text-gray-400 ">
       <AiFillBug size={70} className="p-3" />
       <h1 className="w-full text-3xl font-bold text-[#1f2937] invisible md:visible lg:visible">
         <Link href="/">Bug Tracker</Link>
