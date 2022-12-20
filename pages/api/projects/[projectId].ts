@@ -22,4 +22,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
         res.status(500)
       }
     } 
+
+    if (method === "DELETE") {
+      try {
+        const project = await Project.findByIdAndDelete(projectId)
+        res.status(200).json(project)
+      } catch (err) {
+        res.status(500)
+      }
+    }
 }
