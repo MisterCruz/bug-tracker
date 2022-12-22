@@ -18,7 +18,9 @@ The MongoDB schema takes care of the projects and the tickets within each projec
 
 ## Maintainability
 
-Every component is responsible for it's own function
+Every component is responsible for it's own function.
+
+The application is organized into reusable components avoid code duplication. This helps with performance as state changes for said component only re-render - instead of the whole virtual DOM.
 
 ## Getting Started
 
