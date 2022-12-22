@@ -1,5 +1,7 @@
 ## Bug Tracker - A Product Management Tool 🐞
 
+## Architecture
+
 Front End:
 - Next.js
 - React.js
@@ -9,8 +11,6 @@ Backend:
 - Node.js
 - Express.js
 - MongoDB
-
-## Architecture
 
 The overall architecture is a front end written in React, connected to a Node.js backend with a MongoDB database.
 
