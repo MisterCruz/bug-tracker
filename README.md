@@ -10,13 +10,13 @@ Backend:
 - Express.js
 - MongoDB
 
-#Architecture
+## Architecture
 
 The overall architecture is a front end written in React, connected to a Node.js backend with a MongoDB database.
 
 The MongoDB schema takes care of the projects and the tickets within each project.
 
-#Maintainability
+## Maintainability
 
 Every component is responsible for it's own function
 
