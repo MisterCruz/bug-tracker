@@ -14,6 +14,10 @@ Backend:
 
 The overall architecture is a front end written in React, connected to a Node.js backend with a MongoDB database.
 
+Why React?
+
+I chose React to seperate the app into different components and to reuse code easily.
+
 The MongoDB schema takes care of the projects and the tickets within each project.
 
 ## Maintainability
