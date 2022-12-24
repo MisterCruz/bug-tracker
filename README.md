@@ -18,6 +18,10 @@ Why React?
 
 I chose React to seperate the app into different components and to reuse code easily.
 
+Why Next.js? 
+
+Next.js allows for image optimization, server side rendering, and a better way to handle routing with Next Links.
+
 The MongoDB schema takes care of the projects and the tickets within each project.
 
 ## Maintainability
